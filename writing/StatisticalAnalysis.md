@@ -13,7 +13,7 @@ To really dive deep into statistics we have to be able to disentangle the concep
 Put simply, probability is the likelihood that an event will happen. For example, rolling a 2 on a six sided dice has the probability of 1/6. The basic axioms of probability established by Kolmogorov in 1933 are as follows:
 
 1. The probability of an event is non-negative, $P(E)\geq 0$.
-2. The probability of all possible events is one, $S\in \{E\}$, $P(S) = 1$.
+2. The probability of all possible events is one, $S = {E}$, $P(S) = 1$.
 3. The probability of uncorrelated events is additive, $P(E_1 \cup E_2) = P(E_1) + P(E_2)$
 
 The two merely construct the space within which probability can exists. It is not possible for an event to occur with a negative chance. It is also not possible for probability assigned to all events to exceed one. While I hope we agree on these points the third certainly leaves room for discussion. 
@@ -26,7 +26,7 @@ $$
 
 This becomes much clearer when graphically represented. The intersection $\cap$ is the overlap between the two events. The union $\cup$ is the total space enclosed by the events. You can consider the space enclosed by E_1 to be all possible ways the event can be true e.g. all possible bounces the dice can have. The size of the enclosed area is also a representation of the total probability of the event. 
 
-Now back to the third axiom. If I roll a dice, the probability of attaining a 1 or a 2 is 1/3. This is because the events are mutually exclusive  ($E_1\cap E_2 =\emptyset$) - they're probability spaces don't overlap like in FIGURE. If Sasha and I go fishing in a lake, one may assign according to our gear and fishing skill a 50% chance of catching a fish over the next hour. A naive interpretation of the third axiom would tell us there a 100% chance that one of those two events occur. This touches on the limited scope of the third, which only holds true for exclusive events. When I go fishing with Sasha, we must consider the probability that we both catch a fish, which in this case is $P(E_1)\times P(E_2) = 0.5\times0.5 = 0.25$. If we return to FIGURE, the by simply adding the area of the two as dictated by the third axiom, the intersecting region is double counted. 
+Now back to the third axiom. If I roll a dice, the probability of attaining a 1 or a 2 is 1/3. This is because the events are mutually exclusive  ($E_1\cap E_2 =\emptyset$) - they're probability spaces don't overlap like in FIGURE. If Sasha and I go fishing in a lake, one may assign us each, according to our gear and fishing skill, a 50% chance of catching a fish over the next hour. A naive interpretation of the third axiom would tell us there a 100% chance that one of those two events occur. This touches on the limited scope of the third, which only holds true for exclusive events. When I go fishing with Sasha, we must consider the probability that we both catch a fish, which in this case is $P(E_1)\times P(E_2) = 0.5\times0.5 = 0.25$. If we return to FIGURE, the by simply adding the area of the two as dictated by the third axiom, the intersecting region is double counted. 
 
 <!-- 
 ## Likelihood functions
