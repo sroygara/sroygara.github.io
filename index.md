@@ -15,7 +15,7 @@ $$\begin{align}
 \dot{z} & = -\beta z + xy
 \end{align}$$
 
-Here is a link to another example page: [Test][./Writing/test.md]
+Here is a link to another example page: [Test](./Writing/test.md)
 
-Click here for a [bunny][./Writing/bunny.md]
+Click here for a [bunny](./Writing/bunny.md)
   
