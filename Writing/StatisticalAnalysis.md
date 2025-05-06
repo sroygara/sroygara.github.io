@@ -3,6 +3,24 @@ layout: default
 title: Statistical Analysis
 date: May 2025
 ---
+
+Statistical analysis lies at the very core of any experiments, directly governing what conclusions can be drawn from the observations. What many physicists lack, mostly due to no formal training on the matter is a deep understanding of probability and statistics. I personally have been lucky to have had some some mentors during the course of my PhD who helped push me down this path of furthering my understanding of statistics. This resulted in what I believe to be a quite nice statistical analysis section in my thesis. The following will be an adaption of this work, covering the basics of probabilities and likelihoods, and how we use them to construct hypothesis tests. 
+
+
+## Likelihoods
+
+In this section I will give an introduction to likelihoods.
+
+## Neyman-Pearson Lemma
+
+In this section I will provide the Neyman-Pearson lemma
+
+## A basic example of hypothesis testing
+
+In this section I will give a basic example of hypothesis testing. 
+
+## Below is a dump from my thesis.
+
 In search for new physics we employ two hypothesis tests: the null hypothesis ($H_0$), which posits that the observed data is explained by background only, and the alternate hypothesis ($H_1$), which suggests the observation is explained by the presence of a new signal amongst the background. This formalism is essential for the discovery of new physics as it allows us to first reject the null hypothesis in favour of the alternative.
 
 The basis of hypothesis testing begins with the construction of a likelihood. To illustrate the use of a likelihood, we can begin with a toy example. Consider a counting experiment. The likelihood measuring $n$ events is,
