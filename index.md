@@ -14,4 +14,8 @@ $$\begin{align}
 \dot{y} & = \rho x - y - xz \\
 \dot{z} & = -\beta z + xy
 \end{align}$$
+
+Here is a link to another example page: [Test][./Writing/test.md]
+
+Click here for a [bunny][./Writing/bunny.md]
   

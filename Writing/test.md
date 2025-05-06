@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Sample
+title: Test
 date: May 2025
 ---
 
-This is a sample article.
+This is a test article.
