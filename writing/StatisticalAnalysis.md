@@ -37,7 +37,15 @@ $$
 P(E_1\cup E_2) = P(E_1) + P(E_2) - P(E_1\cap E_2)
 $$
 
+The above text general covers most scenarios for simple unconditional probability. There are of course other permutation such as the probability of one event and not the other, but these can be simply derived following my discussion of Figure 1.
 
+Next we must consider conditional probabilities. That is, how can we define probability of an event, given another correlated event has occured. Let's start with the example of a deck of cards. The probability the probability of drawing a face card is 12/52 while the probability of drawing a king is 4/52. Through simple counting we can resolve that the probability of the card being a king if it is a face card is 1/3. This is due to the following relation of conditional probability,
+
+$$
+P(A|B) = \frac{P(A\cap B)}{P(B)}
+$$
+
+Again, this can be related to Figure 1. As $P(A|B)$ defines the probability of $A$ given $B$ is already true, it is simply the fraction of the intersect of $A$ and $B$ within $B$.
 
 <!-- 
 ## Likelihood functions
