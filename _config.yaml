@@ -1,1 +1,5 @@
 layouts_dir: _layouts
+
+kramdown:
+  math_engine: mathjax
+  input: GFM
