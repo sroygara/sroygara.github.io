@@ -27,7 +27,7 @@ $$
 This becomes much clearer when graphically represented. The intersection $\cap$ is the overlap between the two events. The union $\cup$ is the total space enclosed by the events. You can consider the space enclosed by $E_1$ to be all possible ways the event can be true e.g. all possible bounces the dice can have. The size of the enclosed area is also a representation of the total probability of the event. 
 
 <figure style="text-align: center;">
-    <img src="StatsImages/ProbSpace.jpeg" alt="Here is the description" style="display: block; margin: auto;" width="80%" />
+    <img src="StatsImages/ProbSpace.png" alt="Here is the description" style="display: block; margin: auto;" width="80%" />
     <figcaption style="font-size: 1em;">Figure 1: This is the probability picture.</figcaption>
 </figure>
 
