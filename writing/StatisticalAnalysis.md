@@ -64,6 +64,21 @@ $$
 \int_{a}^{b}f(x) = P(a \leq x \leq b)
 $$
 
+One of the most common probability distributions is the Gaussian distribution, or also coined the normal distribution (or even worse - the bell curve),
+
+$$
+f(x) = \frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+
+where $x$ is once again the random variable, $\mu$ is the mean of the distribution and $\sigma^2$ is the variance or rather the spread of the distribution. Gaussian distribution are used to model many aspects of life, the distribution of human height or test scores. Generalizing, they dictate that there is a mean, most likely value, which decreases in likeliness to either side. 
+
+
+<figure style="text-align: center;">
+    <img src="StatsImages/height.jpg" alt="Here is the description" style="display: block; margin: auto;" width="80%" />
+    <figcaption style="font-size: 1em;">Figure 2: The distribution of human height.</figcaption>
+</figure>
+
+
 <!-- When I go fishing with Sasha, we must consider the probability that we both catch a fish, which in this case is $P(E_1)\times P(E_2) = 0.5\times0.5 = 0.25$. If we return to Figure 1, then by simply adding the area of the two as dictated by the third axiom, the intersecting region is double counted. Thus in the more general case we write,
 
 
