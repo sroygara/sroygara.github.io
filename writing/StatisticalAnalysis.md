@@ -6,7 +6,7 @@ date: May 2025
 
 Statistical interpretation lies at the very core of any experiment, directly governing what conclusions can be drawn from the observations. What many physicists lack, mostly due to no formal training on the matter is a deep understanding of probability and statistics. I personally have been lucky to have had some mentors during the course of my PhD who helped push me down this path of furthering my understanding of statistics. This resulted in what I believe to be quite a nice statistical analysis section in my thesis. The following will be an adaption of this work, covering the basics of probabilities and likelihoods, and how we use them to construct hypothesis tests. 
 
-## Probability and Likelihood
+## A simple introduction to probability and likelihood
 <!-- 
 To really dive deep into statistics we have to be able to disentangle the concepts of probability and likelihood. Though, the issue here is that the two are typically entangled in their definitions. You may see -->
 
