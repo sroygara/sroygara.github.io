@@ -4,37 +4,38 @@ title: Statistical Analysis
 date: May 2025
 ---
 
-Statistical analysis lies at the very core of any experiments, directly governing what conclusions can be drawn from the observations. What many physicists lack, mostly due to no formal training on the matter is a deep understanding of probability and statistics. I personally have been lucky to have had some some mentors during the course of my PhD who helped push me down this path of furthering my understanding of statistics. This resulted in what I believe to be a quite nice statistical analysis section in my thesis. The following will be an adaption of this work, covering the basics of probabilities and likelihoods, and how we use them to construct hypothesis tests. 
+Statistical interpretation lies at the very core of any experiment, directly governing what conclusions can be drawn from the observations. What many physicists lack, mostly due to no formal training on the matter is a deep understanding of probability and statistics. I personally have been lucky to have had some mentors during the course of my PhD who helped push me down this path of furthering my understanding of statistics. This resulted in what I believe to be quite a nice statistical analysis section in my thesis. The following will be an adaption of this work, covering the basics of probabilities and likelihoods, and how we use them to construct hypothesis tests. 
 
 ## Probability and Likelihood
 <!-- 
 To really dive deep into statistics we have to be able to disentangle the concepts of probability and likelihood. Though, the issue here is that the two are typically entangled in their definitions. You may see -->
 
-Put simply, probability is the likelihood that an event will happen. For example, rolling a 2 on a six sided dice has the probability of 1/6. The basic axioms of probability established by Kolmogorov in 1933 are as follows:
+Put simply, probability is the likelihood that an event will happen. I realize this may be confusing as I'm immediately conflating the two terms. In reality, probability is a measure we use before observing data to describe how likely different outcomes are. While likelihood is used after observing data to determine how likely different underlying models are to generate the observed data. I hope to make this clear over time, but for now let's build on the concept of probability with the image of rolling a dice. The probability of rolling a 2 on a six-sided dice is 1/6. The probability of rolling any number is 1. The probability of rolling an even number of 1/2. Those are just a few examples of way in which we can construct probability from simple model. Regardless of the simplicity or complexity of the model, these measures of probability all exist within the confines of the axioms of probability established by Kolmogorov in 1933:
+
 
 1. The probability of an event is non-negative, $P(E)\geq 0$.
 2. The probability of all possible events is one, $S = {E}$, $P(S) = 1$.
-3. The probability of uncorrelated events is additive, $P(E_1 \cup E_2) = P(E_1) + P(E_2)$
+3. The probability of exclusive events is additive, $P(A \cup B) = P(A) + P(B)$
 
-The two merely construct the space within which probability can exists. It is not possible for an event to occur with a negative chance. It is also not possible for probability assigned to all events to exceed one. While I hope we agree on these points the third certainly leaves room for discussion. 
+The two merely construct the bounds within which probability can exists. It is not possible for an event to occur with a negative chance. It is also not possible for probability assigned to all events to exceed one. While I hope we agree on these points the third certainly leaves room for discussion. 
 
-First, we must discuss additional relations. If I roll two die, the probability of rolling two 2's is 1/36. This is because,
+First, we must discuss additional relations. If I roll a dice, the probability of rolling a 2 or 3  1/3. This follows simply from the third axiom. 
 
-$$
-P(E_1\cap E_2) = P(E_1)\times P(E_2)
-$$
-
-This becomes much clearer when graphically represented. The intersection $\cap$ is the overlap between the two events. The union $\cup$ is the total space enclosed by the events. You can consider the space enclosed by $E_1$ to be all possible ways the event can be true e.g. all possible bounces the dice can have. The size of the enclosed area is also a representation of the total probability of the event. 
+<!-- This becomes much clearer when graphically represented by Figure 1. The intersection $\cap$ is the overlap between the two events. The union $\cup$ is the total space enclosed by the events. You can consider the space enclosed by $E_1$ to be all possible ways the event can be true e.g. all possible bounces the dice can have. The size of the enclosed area is also a representation of the total probability of the event.  -->
 
 <figure style="text-align: center;">
     <img src="StatsImages/ProbSpace.png" alt="Here is the description" style="display: block; margin: auto;" width="80%" />
     <figcaption style="font-size: 1em;">Figure 1: This is the probability picture.</figcaption>
 </figure>
 
-Now back to the third axiom. If I roll a dice, the probability of attaining a 1 or a 2 is 1/3. This is because the events are mutually exclusive  ($E_1\cap E_2 =\emptyset$) - they're probability spaces don't overlap like in Figure 1. If Sasha and I go fishing in a lake, one may assign us each, according to our gear and fishing skill, a 50% chance of catching a fish over the next hour. A naive interpretation of the third axiom would tell us there a 100% chance that one of those two events occur. This touches on the limited scope of the third, which only holds true for exclusive events. When I go fishing with Sasha, we must consider the probability that we both catch a fish, which in this case is $P(E_1)\times P(E_2) = 0.5\times0.5 = 0.25$. If we return to Figure 1, then by simply adding the area of the two as dictated by the third axiom, the intersecting region is double counted. Thus in the more general case we write,
+Now if we consider a separate example, of Sasha and I going fishing on a lake. One may assign to us each, according to our gear and fishing skill, a 50% chance of catching a fish over the next hour. A naive interpretation of the third axiom would tell us there's a 100% chance that one of those two events occur. This touches on the limited scope of the third, which only holds true for exclusive events.
+
+An example of non-exclusive events is demonstrated in Figure 1. The total probability space is $S$, which contains two events, $A$ and $B$. These events overlap which means, there is a chance that both occur simultaneously. This overlapping region is called the intersect, defined as $A\cap B$. The total space enveloped by $A$ and $B$, thus being the probability that at least one be true, is the union of the two $A\cup B$. 
+
+Now let's return to the fishing example. If we want to consider the probability that either sasha or I catch a fish, while we can start from the third axiom but we must be certain to not double count the intersect whose probability exists in both $P(A)$ and $P(B)$. To correct this we write,
 
 $$
-P(E_1\cup E_2) = P(E_1) + P(E_2) - P(E_1\cap E_2)
+P(A\cup B) = P(A) + P(B) - P(A\cap B)
 $$
 
 The above text general covers most scenarios for simple unconditional probability. There are of course other permutation such as the probability of one event and not the other, but these can be simply derived following my discussion of Figure 1.
@@ -46,6 +47,19 @@ P(A|B) = \frac{P(A\cap B)}{P(B)}
 $$
 
 Again, this can be related to Figure 1. As $P(A\|B)$ defines the probability of $A$ given $B$ is already true, it is simply the fraction of the intersect of $A$ and $B$ within $B$.
+
+
+
+
+<!-- When I go fishing with Sasha, we must consider the probability that we both catch a fish, which in this case is $P(E_1)\times P(E_2) = 0.5\times0.5 = 0.25$. If we return to Figure 1, then by simply adding the area of the two as dictated by the third axiom, the intersecting region is double counted. Thus in the more general case we write,
+
+
+Now back to the third axiom. If I roll a dice, the probability of attaining a 1 or a 2 is 1/3. This is because the events are mutually exclusive  ($E_1\cap E_2 =\emptyset$) - they're probability spaces don't overlap like in Figure 1. 
+
+$$
+P(E_1\cup E_2) = P(E_1) + P(E_2) - P(E_1\cap E_2)
+$$ -->
+
 
 <!-- 
 ## Likelihood functions
