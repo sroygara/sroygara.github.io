@@ -70,8 +70,7 @@ $$
 f(x) = \frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
 $$
 
-where $x$ is once again the random variable, $\mu$ is the mean of the distribution and $\sigma^2$ is the variance or rather the spread of the distribution. Gaussian distribution are used to model many aspects of life, the distribution of human height or test scores. Generalizing, they dictate that there is a mean, most likely value, which decreases in likeliness to either side. 
-
+where $x$ is once again the random variable, $\mu$ is the mean of the distribution and $\sigma^2$ is the variance or rather the spread of the distribution. Gaussian distribution are used to model many aspects of life, such as the distribution of human height. There is a mean height of roughly 5'9, this means it is most the most likely of heights. The are people who are taller but as can be seen this is increasingly less likely. Similarly to the left, there are shorter people, such as Tom, but this also is increasingly less likely.
 
 <figure style="text-align: center;">
     <img src="StatsImages/height.jpg" alt="Here is the description" style="display: block; margin: auto;" width="80%" />
