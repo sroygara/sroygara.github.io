@@ -56,7 +56,7 @@ Continuous number start to blur our previous descriptions of probability. Consid
 For these reasons we need a probability density function (PDF). The axioms for a PDF $f(x)$ where $x$ is the random variable we are sampling are:
 
 1. The function is always non-negative, $f(x) \geq 0$
-2. The area under the function is one, $\int_{-\inf}^\inf f(x) = 1$
+2. The area under the function is one, $\int_{-\infty}^\infty f(x) = 1$
 
 These two rules are the reinterpretation of the first two Kolmogorov axioms but for continuous random variables. The third rule to establish for the PDF is what guides us in interpreting its meaning. That is,
 
