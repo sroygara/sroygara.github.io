@@ -48,8 +48,21 @@ $$
 
 Again, this can be related to Figure 1. As $P(A\|B)$ defines the probability of $A$ given $B$ is already true, it is simply the fraction of the intersect of $A$ and $B$ within $B$.
 
+To this point, only discrete variables have been considered. That means, as we roll a dice the result value $n$ is within the set $[1, 2, 3, 4, 5, 6]$. There is a countable number of possible outcomes. Whether the set is infinitely large has no relevance. The importance is whether the elements can be enumerated one by one. On the other hand, a continuous random variable is sampled from a set whose elements are uncountable. Consider the set of real numbers. If you were to choose any two number, no matter how small, there exists an infinite number of numbers between those two. 
+
+Continuous number start to blur our previous descriptions of probability. Consider the following scenario, you have stopwatch with an infinite number of digits. What is the probability you are able to stop the timer at exactly 5 seconds. The answer is zero. This shows us we can no longer assign probabilities to individual element of the set. Nevertheless, it is always possible to stop the timer between 4.9 and 5.1 seconds. Therefore, probabilities can still be assigned to intervals. 
 
 
+For these reasons we need a probability density function (PDF). The axioms for a PDF $f(x)$ where $x$ is the random variable we are sampling are:
+
+1. The function is always non-negative, $f(x) \geq 0$
+2. The area under the function is one, $\int_{-\inf}^\inf f(x) = 1$
+
+These two rules are the reinterpretation of the first two Kolmogorov axioms but for continuous random variables. The third rule to establish for the PDF is what guides us in interpreting its meaning. That is,
+
+$$
+\int_{a}^{b}f(x) = P(a \leq x \leq b)
+$$
 
 <!-- When I go fishing with Sasha, we must consider the probability that we both catch a fish, which in this case is $P(E_1)\times P(E_2) = 0.5\times0.5 = 0.25$. If we return to Figure 1, then by simply adding the area of the two as dictated by the third axiom, the intersecting region is double counted. Thus in the more general case we write,
 
