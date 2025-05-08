@@ -78,6 +78,8 @@ where $x$ is once again the random variable, $\mu$ is the mean of the distributi
 </figure>
 
 
+
+
 <!-- When I go fishing with Sasha, we must consider the probability that we both catch a fish, which in this case is $P(E_1)\times P(E_2) = 0.5\times0.5 = 0.25$. If we return to Figure 1, then by simply adding the area of the two as dictated by the third axiom, the intersecting region is double counted. Thus in the more general case we write,
 
 
